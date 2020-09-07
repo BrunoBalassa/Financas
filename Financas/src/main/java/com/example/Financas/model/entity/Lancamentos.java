@@ -57,7 +57,10 @@ public class Lancamentos {
         this.tipoLancamento = tipoLancamento;
         this.statusLancamento = statusLancamento;
     }
+    public Lancamentos(){}
 
+    public Lancamentos(Object o, String pagamento, int i, int i1, BigDecimal ten, LocalDate now, TipoLancamento receita, StatusLancamento pendente) {
+    }
 
     public Long getId() {
         return id;

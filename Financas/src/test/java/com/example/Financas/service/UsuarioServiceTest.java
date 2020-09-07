@@ -32,8 +32,8 @@ public class UsuarioServiceTest {
     public void validarEmail() {
      Mockito.when(usuarioRepository.existsByEmail(Mockito.anyString())).thenReturn(false);
      usuarioService.validarEmail("bno.balassa@gmail.com");
-
     }
+
     @Test(expected = RegraNegocioExecpetion.class)
     public void naoDeveValidarEmail() {
      Mockito
