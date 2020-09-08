@@ -1,5 +1,7 @@
 package com.example.Financas.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -18,6 +20,7 @@ public class Usuario {
        private String email;
 
     @Column(name = "senha")
+    @JsonIgnore
        private String password;
 
     public Usuario(Long id, String name, String email, String password) {
