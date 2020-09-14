@@ -48,7 +48,7 @@ public class UsuarioController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
-    @GetMapping("{id}/saldo")
+    @GetMapping("/{id}/saldo")
     public ResponseEntity obterSaldo(@PathVariable("id") Long id){
        Optional<Usuario> usuario = usuarioService.obterPorId(id);
        if (!usuario.isPresent()){

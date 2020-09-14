@@ -39,7 +39,7 @@ public class LancamentoResource {
         }
     }
 
-    @GetMapping("{id}")
+    @GetMapping
     public ResponseEntity buscar(
             @RequestParam(value = "descricao", required = false) String descricao,
             @RequestParam(value = "mes", required = false) Integer mes,

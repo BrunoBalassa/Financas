@@ -44,7 +44,7 @@ public class UsuarioResourceTest {
         String email = "bruno@gmail";
         String password = "123";
 
-        UsuarioDTO dto = new UsuarioDTO(null, email,
+        UsuarioDTO dto = new UsuarioDTO(email,
                 "bruno balassa", password);
         Usuario usuario = new Usuario(null,"bruno balassa",email,password);
 
@@ -69,7 +69,7 @@ public class UsuarioResourceTest {
         String email = "bruno@gmail";
         String password = "123";
 
-        UsuarioDTO dto = new UsuarioDTO(null, email,
+        UsuarioDTO dto = new UsuarioDTO(email,
                 "bruno balassa", password);
 
         Mockito.when(service.autenticar(email,password)).thenThrow(ErroAutenticacao.class);
@@ -91,7 +91,7 @@ public class UsuarioResourceTest {
         String email = "bruno@gmail";
         String password = "123";
 
-        UsuarioDTO dto = new UsuarioDTO(null, email,
+        UsuarioDTO dto = new UsuarioDTO( email,
                 "bruno balassa", password);
         Usuario usuario = new Usuario(null,"bruno balassa",email,password);
 
@@ -117,7 +117,7 @@ public class UsuarioResourceTest {
         String email = "bruno@gmail";
         String password = "123";
 
-        UsuarioDTO dto = new UsuarioDTO(null, email,
+        UsuarioDTO dto = new UsuarioDTO(email,
                 "bruno balassa", password);
 
 

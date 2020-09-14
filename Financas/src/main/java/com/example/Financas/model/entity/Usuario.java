@@ -14,7 +14,7 @@ public class Usuario {
        private Long id;
 
     @Column(name = "nome")
-       private String name;
+       private String nome;
 
     @Column(name = "email")
        private String email;
@@ -23,9 +23,9 @@ public class Usuario {
     @JsonIgnore
        private String password;
 
-    public Usuario(Long id, String name, String email, String password) {
+    public Usuario(Long id, String nome, String email, String password) {
         this.id = id;
-        this.name = name;
+        this.nome = nome;
         this.email = email;
         this.password = password;
     }
@@ -35,7 +35,7 @@ public class Usuario {
     }
 
     public Usuario(String nome, String email, String password) {
-        this.name = name;
+        this.nome = nome;
         this.email = email;
         this.password = password;
     }
@@ -50,11 +50,11 @@ public class Usuario {
     }
 
     public String getName() {
-        return name;
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String nome) {
+        this.nome = nome;
     }
 
     public String getEmail() {
@@ -79,21 +79,21 @@ public class Usuario {
         if (o == null || getClass() != o.getClass()) return false;
         Usuario usuario = (Usuario) o;
         return id.equals(usuario.id) &&
-                name.equals(usuario.name) &&
+                nome.equals(usuario.nome) &&
                 email.equals(usuario.email) &&
                 password.equals(usuario.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email, password);
+        return Objects.hash(id, nome, email, password);
     }
 
     @Override
     public String toString() {
         return "Usuario{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
